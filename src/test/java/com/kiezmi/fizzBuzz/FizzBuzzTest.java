@@ -7,9 +7,19 @@ import static junit.framework.TestCase.assertTrue;
 public class FizzBuzzTest {
 
     @Test
-    public void firstTest(){
+    public void firstTest() {
         assertTrue(true);
     }
 
+    @Test
+    public void itShoulReturnFizzifDivisiblebythree() {
+        //Arrange
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        int value = 3;
+        //Action
+        boolean result = fizzbuzz.isFizz(value);
+        //Assertion
+        assertTrue(result);
+    }
 
 }
