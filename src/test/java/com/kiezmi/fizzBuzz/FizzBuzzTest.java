@@ -55,11 +55,8 @@ public class FizzBuzzTest {
     @Test
     @UseDataProvider("dataNumberProviderFizz")
     public void itShoulReturnFizzifDivisiblebythree(final int input,final boolean spected) {
-        //Arrange
-        FizzBuzz fizzbuzz = new FizzBuzz();
-
-        //Action
-        boolean result = fizzbuzz.isFizz(input);
+        //Arrange - Action
+        boolean result = FizzBuzz.isFizz(input);
         //Assertion
         assertEquals(spected,result);
     }
@@ -67,10 +64,8 @@ public class FizzBuzzTest {
     @Test
     @UseDataProvider("dataNumberProviderBuzz")
     public void itShoulReturnBuzzifDivisiblebyfive(final int input,final boolean spected) {
-        //Arrange
-        FizzBuzz fizzbuzz = new FizzBuzz();
-        //Action
-        boolean result = fizzbuzz.isBuzz(input);
+        //Arrange - Action
+        boolean result = FizzBuzz.isBuzz(input);
         //Assertion
         assertEquals(spected,result);
     }
@@ -78,10 +73,8 @@ public class FizzBuzzTest {
     @Test
     @UseDataProvider("dataNumberProviderFizzBuzz")
     public void itShoulReturnFizzBuzzifDivisiblebythreeandfive(final int input,final boolean spected) {
-        //Arrange
-        FizzBuzz fizzbuzz = new FizzBuzz();
-        //Action
-        boolean result = fizzbuzz.isFizzBuzz(input);
+        //Arrange - Action
+        boolean result = FizzBuzz.isFizzBuzz(input);
         //Assertion
         assertEquals(spected,result);
     }
