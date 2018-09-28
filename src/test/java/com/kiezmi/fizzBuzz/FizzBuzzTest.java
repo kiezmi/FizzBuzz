@@ -21,5 +21,14 @@ public class FizzBuzzTest {
         //Assertion
         assertTrue(result);
     }
+    public void itShoulReturnFizzifDivisiblebyfive() {
+        //Arrange
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        int value = 5;
+        //Action
+        boolean result = fizzbuzz.isBuzz(value);
+        //Assertion
+        assertTrue(result);
+    }
 
 }
