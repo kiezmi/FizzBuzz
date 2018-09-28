@@ -35,6 +35,17 @@ public class FizzBuzzTest {
                 {30,true},
         };
     }
+    @DataProvider
+    public static Object[][] dataNumberProviderFizzBuzz(){
+        return new Object [][] {
+                {15,true},
+                {30,true},
+                {45,true},
+                {60,true},
+                {75,true},
+                {90,true},
+        };
+    }
 
     @Test
     public void firstTest() {
@@ -58,9 +69,19 @@ public class FizzBuzzTest {
     public void itShoulReturnBuzzifDivisiblebyfive(final int input,final boolean spected) {
         //Arrange
         FizzBuzz fizzbuzz = new FizzBuzz();
-
         //Action
         boolean result = fizzbuzz.isBuzz(input);
+        //Assertion
+        assertEquals(spected,result);
+    }
+
+    @Test
+    @UseDataProvider("dataNumberProviderFizzBuzz")
+    public void itShoulReturnFizzBuzzifDivisiblebythreeandfive(final int input,final boolean spected) {
+        //Arrange
+        FizzBuzz fizzbuzz = new FizzBuzz();
+        //Action
+        boolean result = fizzbuzz.isFizzBuzz(input);
         //Assertion
         assertEquals(spected,result);
     }
