@@ -53,8 +53,9 @@ public class FizzBuzzTest {
         assertEquals(spected,result);
     }
 
+    @Test
     @UseDataProvider("dataNumberProviderBuzz")
-    public void itShoulReturnFizzifDivisiblebyfive(final int input,final boolean spected) {
+    public void itShoulReturnBuzzifDivisiblebyfive(final int input,final boolean spected) {
         //Arrange
         FizzBuzz fizzbuzz = new FizzBuzz();
 
